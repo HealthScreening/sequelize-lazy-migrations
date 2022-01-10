@@ -31,15 +31,15 @@
   },
   "homepage": "https://github.com/healthscreening/sequelize-lazy-migrations#readme",
   "dependencies": {
-    "async": "^3.2.2",
-    "command-line-args": "^5.0.2",
-    "deep-diff": "^1.0.2",
-    "js-beautify": "^1.8.9",
-    "lodash": "^4.17.11",
-    "object-hash": "^2.2.0",
-    "sequelize": "^6.11.0"
+    "async": "3.2.2",
+    "command-line-args": "5.0.2",
+    "deep-diff": "1.0.2",
+    "js-beautify": "1.8.9",
+    "lodash": "4.17.11",
+    "object-hash": "2.2.0",
+    "sequelize": "6.11.0"
   },
   "devDependencies": {
-    "release-it": "^14.9.0"
+    "release-it": "14.9.0"
   }
 }
