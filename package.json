@@ -34,7 +34,7 @@
     "async": "3.2.3",
     "command-line-args": "5.2.0",
     "deep-diff": "1.0.2",
-    "js-beautify": "1.8.9",
+    "js-beautify": "1.14.0",
     "lodash": "4.17.21",
     "object-hash": "2.2.0",
     "sequelize": "6.12.5"
