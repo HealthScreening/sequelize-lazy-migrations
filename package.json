@@ -37,7 +37,7 @@
     "js-beautify": "1.8.9",
     "lodash": "4.17.21",
     "object-hash": "2.2.0",
-    "sequelize": "6.11.0"
+    "sequelize": "6.12.5"
   },
   "devDependencies": {
     "release-it": "14.9.0"
