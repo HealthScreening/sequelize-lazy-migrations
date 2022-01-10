@@ -35,7 +35,7 @@
     "command-line-args": "5.0.2",
     "deep-diff": "1.0.2",
     "js-beautify": "1.8.9",
-    "lodash": "4.17.11",
+    "lodash": "4.17.21",
     "object-hash": "2.2.0",
     "sequelize": "6.11.0"
   },
