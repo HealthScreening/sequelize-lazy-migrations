@@ -32,7 +32,7 @@
   "homepage": "https://github.com/healthscreening/sequelize-lazy-migrations#readme",
   "dependencies": {
     "async": "3.2.3",
-    "command-line-args": "5.2.0",
+    "command-line-args": "5.2.1",
     "deep-diff": "1.0.2",
     "js-beautify": "1.14.0",
     "lodash": "4.17.21",
