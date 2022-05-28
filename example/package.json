@@ -9,7 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "sequelize": "^6.6.5",
+    "sequelize": "^6.19.0",
     "sqlite3": "npm:@vscode/sqlite3@^5.0.7"
   }
 }
