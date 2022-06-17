@@ -26,7 +26,7 @@ if(!process.env.PWD){
 }
 
 let {
-    migrationsDir, 
+    migrationsDir,
     modelsDir
 } = pathConfig(options);
 
@@ -50,7 +50,8 @@ if (options.help)
     process.exit(0);
 }
 
-const sequelize = require(modelsDir).default;
+let modelsDirMod = require(modelsDir);
+let sequelize = modelsDirMod.sequelize || modelsDirMod.default;
 const queryInterface = sequelize.getQueryInterface();
 
 // execute all migration from
@@ -76,8 +77,8 @@ let migrationFiles = fs.readdirSync(migrationsDir)
       let rev = parseInt( path.basename(file).split('-',2)[1]);
       return (rev >= fromRevision);
   });
-  
-console.log("Migrations to execute:");  
+
+console.log("Migrations to execute:");
 migrationFiles.forEach((file) => {
     console.log("\t"+file);
 });
@@ -86,13 +87,13 @@ if (options.list)
     process.exit(0);
 
 
-Async.eachSeries(migrationFiles, 
+Async.eachSeries(migrationFiles,
     function (file, cb) {
         console.log("Execute migration from file: "+file);
         migrate.executeMigration(queryInterface, path.join(migrationsDir, file), fromPos, (err) => {
             if (stop)
                 return cb("Stopped");
-                
+
             cb(err);
         });
         // set pos to 0 for next migration
