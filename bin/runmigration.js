@@ -50,7 +50,7 @@ if (options.help)
     process.exit(0);
 }
 
-const sequelize = require(modelsDir).sequelize;
+const sequelize = require(modelsDir).default;
 const queryInterface = sequelize.getQueryInterface();
 
 // execute all migration from
@@ -65,15 +65,15 @@ let migrationFiles = fs.readdirSync(migrationsDir)
   })
 // sort by revision
   .sort( (a, b) => {
-      let revA = parseInt( path.basename(a).split('-',2)[0]),
-          revB = parseInt( path.basename(b).split('-',2)[0]);
+      let revA = parseInt( path.basename(a).split('-',2)[1]),
+          revB = parseInt( path.basename(b).split('-',2)[1]);
       if (revA < revB) return -1;
       if (revA > revB) return 1;
       return 0;
   })
 // remove all migrations before fromRevision
   .filter((file) => {
-      let rev = parseInt( path.basename(file).split('-',2)[0]);
+      let rev = parseInt( path.basename(file).split('-',2)[1]);
       return (rev >= fromRevision);
   });
   
